@@ -1,6 +1,7 @@
 /************************************************************************
 * CREATED TIME: 2016-8-28 20:23:39
-* MODIFIED TIME: 2016-8-28 20:23:44
+* LAST MODIFIED TIME: 2016-8-28 23:10:25
+* DESCRIPTION: 去除字符串两端空格(string/char*)
 * BY: 357688981@qq.com
 ************************************************************************/
 
@@ -39,5 +40,39 @@ int main() {
     std::cout << "[" << trim(str) << "]" << std::endl;
     std::cout << "[" << str << "]" << std::endl;
 
+    return 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
+
+// 去除char* 字符串两端空格
+char* trimWhiteSpace(char* str) {
+    if (str == NULL) {
+        return str;
+    }
+    char* end;
+    // Trim leading space.
+    while (isspace(*str))
+        str++;
+    // All spaces?
+    if (*str == 0) {
+        return str;
+    }
+    // Trim trailing space.
+    end = str + strlen(str) - 1;
+    while (end > str && isspace(*end))
+        end--;
+    // Write new null terminator.
+    *(end+1) = 0;
+    return str;
+}
+
+int main() {
+    char str[] = "    hello, world !!!  ";
+    std::cout << "[" << str <<"]" << std::endl;
+    std::cout << "[" << trimWhiteSpace(str) << "]" << std::endl;
     return 0;
 }

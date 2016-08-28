@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 #coding=utf-8
+
+"""
+* CREATED TIME: 2016-8-27 23:55:13
+* MODIFIED TIME: 2016-8-28 10:02:14
+* BY: 357688981@qq.com
+"""
+
 import sys
 
 # 判断操作系统platform

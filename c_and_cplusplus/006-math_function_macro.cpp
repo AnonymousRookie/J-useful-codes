@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2016-9-4 18:20:55
-* LAST MODIFIED TIME: 2016-9-4 19:43:04
+* LAST MODIFIED TIME: 2016-9-20 15:09:37
 * DESCRIPTION: 一些常用的数学计算函数和宏定义
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -17,8 +17,12 @@
 /**Util macro for conversion from radians to degrees.*/
 #define MATH_RAD_TO_DEG(x)        ((x) * 57.29577951f)
 
+// 最大最小值
 #define MATH_MIN(a,b)            (((a) < (b)) ? (a) : (b))
 #define MATH_MAX(a,b)            (((a) > (b)) ? (a) : (b))
+
+// 浮点数比较 是否相等
+#define MATH_FLOAT_EQUAL(v1, v2) (abs(v1 - v2) < std::numeric_limits<float>::epsilon())
 
 /***********************************
 * 常用的函数

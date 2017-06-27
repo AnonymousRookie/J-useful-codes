@@ -1,4 +1,4 @@
-001-split_filename: "C:\\Program Files\\STSLIST.DLL" ==> "STSLIST.DLL"
+﻿001-split_filename: "C:\\Program Files\\STSLIST.DLL" ==> "STSLIST.DLL"
 002-trimming_functions: 去除字符串 左端/右端/两端 空格
 003-split_string: 按指定分隔符对字符串进行split
 004-is_string_numeric: 判断 字符串 是否是 数值 "-123.456000"
@@ -7,7 +7,7 @@
 007-vec2_class: 二维向量类
 008-string_tolower_toupper: 字符串转换成 全部小写/全部大写
 009-vec3_class: 三维向量类
-010-string_number_convert: 数字 字符串 相互转换
+010-string_number_convert: 字符串 转换成 数字
 011-boost_program_options: 命令行参数解析程序配置选项
 012-base64_encode_decode.cpp: 字符串 base64_encode & base64_decode
 013-check_cpp_compiler_version.h: 检测C++编译器的版本是否满足要求

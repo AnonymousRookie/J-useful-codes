@@ -1,9 +1,13 @@
 /************************************************************************
 * CREATED TIME: 2016-8-28 20:46:33
-* MODIFIED TIME: 2016-8-28 20:46:37
+* MODIFIED TIME: 2017-6-28 10:26:35
+* DESCRIPTION: Tokenize string
 * BY: 357688981@qq.com
 ************************************************************************/
 
+/**
+ * 实现一
+ */
 #include <iostream>
 #include <vector>
 #include <string>
@@ -35,5 +39,53 @@ int main(){
         std::cout << "[" << *iter << "]" << std::endl;
     }
 
+    return 0;
+}
+
+
+/**
+ * 实现二
+ */
+#include <iostream>
+#include <vector>
+#include <string>
+
+namespace z {
+    // Tokenizes string. Returns all non-empty substrings
+    template<typename String, typename Delim, typename Container = std::vector<String>>
+    Container strtok(String const& s, Delim const& delims)
+    {
+        Container ret;
+
+        typename String::size_type start{}, pos{};
+        do {
+            pos = s.find_first_of(delims, start);
+
+            // Not found, we're at ends;
+            if (pos == String::npos) {
+                if (start < s.size()) {
+                    ret.emplace_back(s.substr(start));
+                }
+            }
+            else if (pos > start) {
+                // Non-empty substring
+                ret.emplace_back(s.substr(start, pos - start));
+            }
+            start = pos + 1;
+        } while (pos != String::npos);
+
+        return ret;
+    }
+
+}
+
+int main() {
+
+    std::string str = "hello,world,,and,c++...";
+    auto v = z::strtok(str, ',');
+
+    for (auto iter = v.cbegin(); iter != v.cend(); ++iter) {
+        std::cout << "[" << *iter << "]" << std::endl;
+    }
     return 0;
 }

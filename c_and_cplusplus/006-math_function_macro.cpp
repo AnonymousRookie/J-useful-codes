@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2016-9-4 18:20:55
-* LAST MODIFIED TIME: 2016-10-9 16:52:04
+* LAST MODIFIED TIME: 2017-7-14 23:37:22
 * DESCRIPTION: 一些常用的数学计算函数和宏定义
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -84,17 +84,43 @@ size_t convertHex(char buf[], uintptr_t value) {
     return p - buf;
 }
 
+
+/* 003. 比较2个数是否相等 */
+#include <cmath>
+#include <cfloat>
+namespace z {
+    template<typename T>
+    bool AlmostEquals(T a, T b) {
+        return a == b;
+    }
+    template<>
+    inline bool AlmostEquals(float a, float b) {
+        return fabs(a - b) < 32 * FLT_EPSILON;
+    }
+
+    template<>
+    inline bool AlmostEquals(double a, double b) {
+        return fabs(a - b) < 32 * DBL_EPSILON;
+    }
+}
+
 int main()
 {
-    // test NextPowerOfTwo()
+    // 001 - test NextPowerOfTwo()
     std::cout << NextPowerOfTwo(15) << std::endl;
     std::cout << NextPowerOfTwo(32) << std::endl;
     std::cout << NextPowerOfTwo(65) << std::endl;
 
-    // test size_t convertHex(char buf[], uintptr_t value)
+    // 002 - test size_t convertHex(char buf[], uintptr_t value)
     char hex_str[32];
     size_t ret = convertHex(hex_str, 60);
     std::cout << hex_str << "\n";  // 3C
+
+    // 003 - test AlmostEquals()
+    std::cout << z::AlmostEquals(1,1) << std::endl;
+    std::cout << z::AlmostEquals(1.01f,1.01f) << std::endl;
+    std::cout << z::AlmostEquals(1.01,1.01) << std::endl;
+
 
     return 0;
 }

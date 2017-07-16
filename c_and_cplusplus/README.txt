@@ -13,3 +13,5 @@
 013-check_cpp_compiler_version.h: 检测C++编译器的版本是否满足要求
 014-version.cpp: Macros and functions to get the version of the headers and the library
 015-defs.h: 跨平台宏定义
+016-string_prefix_suffix.cpp: 检测字符串是否以某个前缀开头或以某个后缀结尾
+017-local_filesys: 本地文件系统常见操作

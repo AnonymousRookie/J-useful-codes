@@ -15,4 +15,5 @@
 015-defs.h: 跨平台宏定义
 016-string_prefix_suffix.cpp: 检测字符串是否以某个前缀开头或以某个后缀结尾
 017-local_filesys: 本地文件系统常见操作
-018-018-internal_helper_class.cpp: 内部辅助类(NoCopy, StaticClass)
+018-internal_helper_class.cpp: 内部辅助类(NoCopy, StaticClass)
+019-lib_dll: 静态/动态链接库

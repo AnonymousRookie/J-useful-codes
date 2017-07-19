@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibCalculator", "LibCalculator\LibCalculator.vcxproj", "{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		dll_debug|Win32 = dll_debug|Win32
+		dll_release|Win32 = dll_release|Win32
+		Release|Win32 = Release|Win32
+		static_debug|Win32 = static_debug|Win32
+		static_release|Win32 = static_release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.Debug|Win32.ActiveCfg = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.Debug|Win32.Build.0 = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.dll_debug|Win32.ActiveCfg = dll_debug|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.dll_debug|Win32.Build.0 = dll_debug|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.dll_release|Win32.ActiveCfg = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.dll_release|Win32.Build.0 = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.Release|Win32.ActiveCfg = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.Release|Win32.Build.0 = dll_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.static_debug|Win32.ActiveCfg = static_debug|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.static_debug|Win32.Build.0 = static_debug|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.static_release|Win32.ActiveCfg = static_release|Win32
+		{56F9BAEF-3C5F-4DD5-A643-925FCC410B05}.static_release|Win32.Build.0 = static_release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

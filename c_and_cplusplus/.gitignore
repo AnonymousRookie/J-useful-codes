@@ -1,0 +1,10 @@
+*.suo
+*.sdf
+ipch
+*.vcxproj.user
+*.opensdf
+*.pdb
+*.ilk
+*.exp
+*.dll
+*.lib

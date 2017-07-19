@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLibDll", "TestLibDll\TestLibDll.vcxproj", "{D792C70B-7047-41A6-AA68-95C4C75D58DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		dll_debug|Win32 = dll_debug|Win32
+		dll_release|Win32 = dll_release|Win32
+		static_debug|Win32 = static_debug|Win32
+		static_release|Win32 = static_release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.dll_debug|Win32.ActiveCfg = dll_debug|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.dll_debug|Win32.Build.0 = dll_debug|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.dll_release|Win32.ActiveCfg = dll_release|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.dll_release|Win32.Build.0 = dll_release|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.static_debug|Win32.ActiveCfg = static_debug|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.static_debug|Win32.Build.0 = static_debug|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.static_release|Win32.ActiveCfg = static_release|Win32
+		{D792C70B-7047-41A6-AA68-95C4C75D58DE}.static_release|Win32.Build.0 = static_release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

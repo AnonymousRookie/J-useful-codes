@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2017-7-16 12:37:35
-* LAST MODIFIED TIME: 2017-7-16 12:37:35
+* LAST MODIFIED TIME: 2017-11-20 22:42:50
 * DESCRIPTION: 检测字符串是否以某个前缀开头或以某个后缀结尾
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -9,7 +9,8 @@
 #include <string>
 using namespace std;
 
-namespace z {
+// 实现1
+namespace z1 {
 
     // ----------------------------------------------------------------------
     // HasPrefixString()
@@ -57,13 +58,28 @@ namespace z {
 
 }
 
+// 实现2
+namespace z2 {
+    bool starts_with(const char* str, const char* pattern) {
+        if (!str || !pattern) {
+            return false;
+        }
+        while (*pattern && *str == *pattern) {
+            ++str;
+            ++pattern;
+        }
+        return (*pattern == 0);
+    }
+}
+
+
 int main()
 {
-    cout << z::HasPrefixString("cplusplus.pdf", "cplus") << endl;  // 1
-    cout << z::StripPrefixString("cplusplus.pdf", "cplus") << endl;// plus.pdf
+    cout << z1::HasPrefixString("cplusplus.pdf", "cplus") << endl;  // 1
+    cout << z1::StripPrefixString("cplusplus.pdf", "cplus") << endl;// plus.pdf
 
-    cout << z::HasSuffixString("cplusplus.pdf", ".pdf") << endl;   // 1
-    cout << z::StripSuffixString("cplusplus.pdf", ".pdf") << endl; // cplusplus
+    cout << z1::HasSuffixString("cplusplus.pdf", ".pdf") << endl;   // 1
+    cout << z1::StripSuffixString("cplusplus.pdf", ".pdf") << endl; // cplusplus
 
     return 0;
 }

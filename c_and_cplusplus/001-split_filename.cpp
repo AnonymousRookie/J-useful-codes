@@ -1,14 +1,15 @@
 /************************************************************************
 * CREATED TIME: 2016-8-28 15:43:33
-* MODIFIED TIME: 2016-8-28 15:50:38
+* MODIFIED TIME: 2017-12-29 22:47:27
+* DESCRIPTION: SplitFilename, GetDirName
 * BY: 357688981@qq.com
 ************************************************************************/
 
 #include <iostream>
 #include <string>
 
-static void splitFilename(std::string& str)
-{
+// "C:\\Program Files\\STSLIST.DLL" ==> "STSLIST.DLL"
+static void SplitFilename(std::string& str) {
     size_t found = 0;
     /*
         size_t: 于机器的环境, 它的长度有可能不同, 它是一个与机器相关的unsigned类型,
@@ -20,18 +21,27 @@ static void splitFilename(std::string& str)
         那么判断就完全不正确了。 所以, 正确的应该是: string::size_t rc = s.find(.....);
         这个时候使用 if ( rc == string::npos )就正确了。
     */
-
     found = str.find_last_of("/\\");
-    if (found != std::string::npos)
-    {
+    if (found != std::string::npos) {
         str = str.substr(found + 1);
+    }
+}
+
+// "C:\\Program Files\\STSLIST.DLL" ==> "C:\\Program Files\\"
+// Assume a filename, and not a directory name like "/foo/bar/"
+static std::string GetDirName(const std::string& filename) {
+    size_t found = filename.find_last_of("/\\");
+    if (found == std::string::npos) {
+        return "";
+    } else {
+        return filename.substr(0, found);
     }
 }
 
 int main()
 {
-    std::string str = "C:\\Program Files\\Microsoft Office\\Office12\\STSLIST.DLL";
-    splitFilename(str);
+    std::string str = "C:\\Program Files\\Office12\\STSLIST.DLL";
+    SplitFilename(str);
     std::cout << str <<std::endl;  // STSLIST.DLL
     printf("%s\n", str.c_str());
 	return 0;

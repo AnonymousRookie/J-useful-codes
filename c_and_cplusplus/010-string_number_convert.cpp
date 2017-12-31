@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2016-10-9 17:01:40
-* LAST MODIFIED TIME: 2017-6-27 17:12:48
+* LAST MODIFIED TIME: 2017-12-31 17:27:47
 * DESCRIPTION: 字符串 转换成 数字
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -85,6 +85,46 @@ namespace z {
         }
     }
 }
+
+/**
+ * 方法三
+ */
+#include <sstream>
+#include <string>
+
+template <typename T>
+std::string ToString(T value)
+{
+    std::ostringstream os;
+    os << value;
+    return os.str();
+}
+
+inline int StringToInt(const string& str) {
+    std::stringstream ss;
+    int n = 0;
+    ss << str;
+    ss >> n;
+    return n;
+}
+
+
+
+#include <iomanip>
+#include <sstream>
+#include <string>
+/*
+    format_int(1,3) ==> "001"
+    format_int(12,3) ==> "012"
+    format_int(123,3) ==> "123"
+*/
+inline std::string format_int(int n, int numberOfLeadingZeros = 0 ) {
+    std::ostringstream s;
+    s << std::setw(numberOfLeadingZeros) << std::setfill('0') << n;
+    return s.str();
+}
+
+
 
 int main() {
     {

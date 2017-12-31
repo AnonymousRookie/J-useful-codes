@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2016-9-4 18:20:55
-* LAST MODIFIED TIME: 2017-7-14 23:37:22
+* LAST MODIFIED TIME: 2017-12-30 17:44:24
 * DESCRIPTION: 一些常用的数学计算函数和宏定义
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -102,6 +102,14 @@ namespace z {
     inline bool AlmostEquals(double a, double b) {
         return fabs(a - b) < 32 * DBL_EPSILON;
     }
+}
+
+/* 004. 四舍五入 */
+static float Round(float f) {
+    return (f > 0.f) ? std::floor(f + 0.5f) : std::ceil(f - 0.5f);
+}
+static double Round(double d) {
+    return (d > 0.0) ? std::floor(d + 0.5) : std::ceil(d - 0.5);
 }
 
 int main()

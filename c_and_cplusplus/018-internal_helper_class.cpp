@@ -1,6 +1,6 @@
 /************************************************************************
 * CREATED TIME: 2017-7-17 20:21:57
-* LAST MODIFIED TIME: 2017-7-17 20:21:57
+* LAST MODIFIED TIME: 2017-12-31 17:21:58
 * DESCRIPTION: 内部辅助类
 * BY: 357688981@qq.com
 ************************************************************************/
@@ -38,6 +38,19 @@ class A : z::base::NoCopy {
 public:
     A() {}
     ~A(){}
+};
+
+// Disable the copy and assignment operator for a class.
+#define DISABLE_COPY_AND_ASSIGN(classname) \
+private:\
+    classname(const classname&);\
+    classname& operator=(const classname&)
+
+class A2
+{
+public:
+    A2() {}
+    DISABLE_COPY_AND_ASSIGN(A2);
 };
 
 class B : z::base::StaticClass {

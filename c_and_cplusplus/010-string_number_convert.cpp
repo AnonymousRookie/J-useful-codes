@@ -108,8 +108,25 @@ inline int StringToInt(const string& str) {
     return n;
 }
 
+/**
+ * 方法四
+ */
+namespace utils {
+    void appendNumToStr(std::string* str, uint64_t num) {
+        char buf[30];
+        snprintf(buf, sizeof(buf), "%llu", (unsigned long long)num);
+        str->append(buf);
+    }
+    std::string numberToString(uint64_t num) {
+        std::string str;
+        appendNumToStr(&str, num);
+        return str;
+    }
+}
 
-
+/**
+ * 将数字转换成指定长度的字符串
+ */
 #include <iomanip>
 #include <sstream>
 #include <string>

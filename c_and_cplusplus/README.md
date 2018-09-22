@@ -1,4 +1,4 @@
-﻿# Useful c/c++ examples 
+﻿# Useful c/c++ examples
 
 - [001-split_filename](https://github.com/AnonymousRookie/useful-codes/blob/master/c_and_cplusplus/001-split_filename.cpp): SplitFilename, GetDirName
 
@@ -45,3 +45,7 @@
 - [022-limits](https://github.com/AnonymousRookie/useful-codes/blob/master/c_and_cplusplus/022-limits.cpp): max/min value of some type
 
 - [023-macros](https://github.com/AnonymousRookie/useful-codes/blob/master/c_and_cplusplus/023-macros.cpp): 一些常见的宏定义
+
+- [024-tcp_ip](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/024-tcp_ip)
+
+- [025_qt](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/025_qt)

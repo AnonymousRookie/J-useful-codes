@@ -2,7 +2,7 @@
  * Copyright 2018-2019, AnonymousRookie. All rights reserved.
  * https://github.com/AnonymousRookie/
  * Author: AnonymousRookie (357688981 at qq dot com)
- * Description: ¼òÒ×loggerµÄÊµÏÖ
+ * Description: ç®€æ˜“loggerçš„å®žçŽ°
  */
 
 #include <cstdio>

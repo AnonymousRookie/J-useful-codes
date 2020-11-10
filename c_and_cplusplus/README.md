@@ -48,4 +48,19 @@
 
 - [024-tcp_ip](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/024-tcp_ip)
 
-- [025_qt](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/025_qt)
+- [025-qt常用代码](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/025-qt常用代码.md): Qt常用代码
+
+- [026-logger](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/026-logger): 简易的logger实现
+
+- [027-blocking_queue](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/027-blocking_queue)
+
+- [028-进制转换](https://github.com/AnonymousRookie/useful-codes/tree/master/c_and_cplusplus/028-进制转换.md)
+
+
+
+
+
+
+
+
+
